@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: radial-gradient(circle at top, #0a0a12, #050508 80%);
+    color: #eaeaea;
+    padding-bottom: 24px;
+}
+
+.header {
+    width: 100%;
+    padding: 20px clamp(16px, 4vw, 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+.btn-voltar {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(90, 103, 216, 0.6);
+    transition: 0.3s;
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-voltar:hover {
+    background: rgba(90, 103, 216, 0.5);
+    box-shadow: 0 0 10px rgba(90, 103, 216, 0.7);
+}
+
+.container {
+    width: min(100% - 32px, 700px);
+    margin: clamp(24px, 6vw, 60px) auto 0;
+    padding: clamp(24px, 5vw, 40px);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.titulo {
+    font-size: clamp(1.6rem, 4vw, 1.75rem);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.subtitulo {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #bbb;
+    font-size: clamp(1.1rem, 3vw, 1.25rem);
+}
+
+.descricao {
+    font-size: clamp(0.95rem, 2.6vw, 1rem);
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #cfcfcf;
+}
+
+.membros {
+    list-style: none;
+}
+
+.membros li {
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    letter-spacing: 1px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.membros li:hover {
+    background: rgba(90, 103, 216, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(90, 103, 216, 0.6);
+}
+
+.membros li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #5a67d8;
+    transition: 0.3s;
+}
+
+.membros li:hover::after {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #373946;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100%;
+        letter-spacing: 2px;
+    }
+
+    .btn-voltar {
+        width: 100%;
+    }
+
+    .membros li:hover {
+        transform: none;
+    }
+}
