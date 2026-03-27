@@ -7,7 +7,7 @@ document.querySelector("#btnLogin").addEventListener("click", function() {
     let usuarios = [
         { lg: "davi@conselho.com", senha: "18351835" },
         { lg: "neneca@conselho.com", senha: "sougay123" },
-        { lg: "789", senha: "senha" }
+        { lg: "raphael@conselho.com", senha: "Jesus929305" }
     ];
 
     let encontrado = false;
